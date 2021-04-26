@@ -13,6 +13,6 @@ auth.verifyAuth() // This exension verify autentication, if set.
 stats(aedes) // This exension verify stats, .
 
 server.listen(port, function () {
-  console.log('Broker started and listening on port ', port)
+  console.log('Broker started and listening on port ', server.address)
   console.log('Broker id instance is', aedes.id)
 })
