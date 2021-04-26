@@ -6,9 +6,7 @@ const { createServer } = require('aedes-server-factory')
 const port = 1883
 
 // Create server aedes
-const server = createServer(aedes, {
-  ws: true,
-})
+const server = createServer(aedes)
 
 // Running Exensions
 auth.verifyAuth() // This exension verify autentication, if set.
