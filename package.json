@@ -1,0 +1,18 @@
+{
+  "name": "myBroker",
+  "version": "1.0.0",
+  "description": "Pre-configured instance of Aedes with useful extensions.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aedes": "^0.45.2",
+    "aedes-server-factory": "^0.1.2",
+    "aedes-stats": "^4.0.0"
+  }
+}
