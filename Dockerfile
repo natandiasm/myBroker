@@ -4,6 +4,8 @@ WORKDIR /opt/app
 
 ENV PORT=1883
 
+EXPOSE 1883
+
 # daemon for cron jobs
 RUN echo 'crond' > /boot.sh
 # RUN echo 'crontab .openode.cron' >> /boot.sh
