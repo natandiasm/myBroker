@@ -1,0 +1,15 @@
+---
+application:
+  name: "mybroker"
+  project: "mqtt.ranchonds.ml"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: "myBrokerDB"
+  version: "4.4"
+routers:
+- name: "main-mybroker"
+  routes:
+  - application_name: "mybroker"
+    paths:
+    - "/*"
