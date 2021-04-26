@@ -10,6 +10,9 @@ databases:
   version: "4.4"
 routers:
 - name: "main-mybroker"
+  custom_domains:
+    - branch: "main"
+      domain: "mqtt.ranchonds.ml"
   routes:
   - application_name: "mybroker"
     paths:
