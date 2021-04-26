@@ -3,6 +3,7 @@ application:
   name: "mybroker"
   project: "mqtt.ranchonds.ml"
   organization: "QoveryCommunity"
+  port: 1883
 databases:
 - type: "MONGODB"
   name: "myBrokerBD"
