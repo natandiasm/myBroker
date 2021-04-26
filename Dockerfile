@@ -2,7 +2,7 @@ FROM node:14-alpine
 
 WORKDIR /opt/app
 
-ENV PORT=80
+ENV PORT=1883
 
 # daemon for cron jobs
 RUN echo 'crond' > /boot.sh
