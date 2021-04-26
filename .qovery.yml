@@ -2,6 +2,7 @@
 application:
   name: "mybroker"
   project: "mqtt.ranchonds.ml"
+  publicly_accessible: true
   organization: "QoveryCommunity"
   port: 1883
 databases:
