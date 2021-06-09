@@ -10,7 +10,7 @@ const server = createServer(aedes)
 
 // Running Exensions
 auth.verifyAuth() // This exension verify autentication, if set.
-stats(aedes) // This exension verify stats, .
+stats(aedes) // This exension verify stats.
 
 server.listen(port, function () {
   console.log('Broker started and listening on port ', port)

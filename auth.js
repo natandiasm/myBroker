@@ -18,12 +18,12 @@ class Auth {
                         // Verify password
                         if (password.toString() === pass) {
                             // If hit, connect with broker
-                            console.log('user with id', client.id, 'connected')
+                            console.log('User with id', client.id, 'connected')
                             callback(null, username, password)
                         } else {
                             let error = new Error('Auth error')
                             error.returnCode = 4
-                            console.warn('user with id', client.id, 'password error')
+                            console.warn('User with id', client.id, 'password error')
                             callback(error, null)
                         }
                     } else {
@@ -34,7 +34,7 @@ class Auth {
                 } else {
                     let error = new Error('Auth error')
                     error.returnCode = 4
-                    console.warn('user with id', client.id, 'user error ', username)
+                    console.warn('User with id', client.id, 'user error ', username)
                     callback(error, null)
                 }
             }
