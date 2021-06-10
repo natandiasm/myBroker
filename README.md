@@ -22,7 +22,7 @@ And ready 🎉
 ## Usage
 If you don't want to use passwords at your broker, just run:
 ```bash
-node start
+npm start
 ```
 If you want your broker with a user. create the environment variables
 ```bash
@@ -34,7 +34,7 @@ PASS_BROKER = password
 ```
 Then run
 ```bash
-node start
+npm start
 ```
 Or run at once:
 ```bash
