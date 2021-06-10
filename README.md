@@ -1,4 +1,5 @@
 # myBroker
+![MyBroker running](./img/terminal1.png)
 
 Create an MQTT broker easily. With myBroker creating a broker on-premises or in the cloud just got simpler.
 

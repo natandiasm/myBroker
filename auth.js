@@ -1,3 +1,4 @@
+const term = require( 'terminal-kit' ).terminal
 class Auth {
     constructor(aedes) {
         this.aedes = aedes
@@ -15,15 +16,23 @@ class Auth {
                 if (username === user) {
                     // Verify that the password has been set in the environment variables
                     if (pass) {
-                        // Verify password
-                        if (password.toString() === pass) {
-                            // If hit, connect with broker
-                            console.log('User with id', client.id, 'connected')
-                            callback(null, username, password)
+                        // Verify password is empty
+                        if(password !== undefined ){
+                            // Verify password
+                            if (password.toString() === pass) {
+                                // If hit, connect with broker
+                                term('\n').bgGreen(' Auth sucess:')(' User with id ')(client.id)(' connected')
+                                callback(null, username, password)
+                            } else {
+                                let error = new Error('Auth error')
+                                error.returnCode = 4
+                                term('\n').bgRed(' Auth failed:')(' User with id')(client.id)(' password error')
+                                callback(error, null)
+                            }
                         } else {
                             let error = new Error('Auth error')
                             error.returnCode = 4
-                            console.warn('User with id', client.id, 'password error')
+                            term('\n').bgRed(' Auth failed:')(' User with id ')(client.id)(' password empty')
                             callback(error, null)
                         }
                     } else {
@@ -34,7 +43,7 @@ class Auth {
                 } else {
                     let error = new Error('Auth error')
                     error.returnCode = 4
-                    console.warn('User with id', client.id, 'user error ', username)
+                    term('\n').bgRed(' Auth failed:')(' User with id ')(client.id)(' - user: ')(username)
                     callback(error, null)
                 }
             }
